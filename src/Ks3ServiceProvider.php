@@ -3,7 +3,7 @@ namespace link1st\Ks3;
 
 use Illuminate\Support\ServiceProvider;
 
-use link1st\Ks3\App\Easemob;
+use link1st\Ks3\App\Ks3Client;
 
 class Ks3ServiceProvider extends ServiceProvider
 {
@@ -50,7 +50,7 @@ class Ks3ServiceProvider extends ServiceProvider
 
         // 容器绑定
         $this->app->bind('Ks3', function () {
-            return new Easemob();
+            return new Ks3Client();
         });
     }
 
