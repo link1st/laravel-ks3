@@ -4,11 +4,11 @@
 ## 安装
 加载包
 
-`"link1st/laravel-sk3": "dev-master"`
+`"link1st/laravel-ks3": "dev-master"`
 
 或
 
-`composer require ink1st/laravel-sk3`
+`composer require link1st/laravel-ks3`
 
 在配置文件中添加 **config/app.php**
 
@@ -31,7 +31,7 @@
 
 `php artisan vendor:publish`
 
-设置金山云的参数 **config/sk3.php**
+设置金山云的参数 **config/ks3.php**
 
 
 ## 使用
