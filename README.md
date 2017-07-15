@@ -8,7 +8,7 @@
 
 或
 
-`composer require ink1st/laravel-easemob`
+`composer require ink1st/laravel-sk3`
 
 在配置文件中添加 **config/app.php**
 
@@ -17,13 +17,13 @@
         /**
          * 添加供应商
          */
-        link1st\Easemob\EasemobServiceProvider::class,
+        link1st\Ks3\Ks3ServiceProvider::class,
     ],
     'aliases' => [
          /**
           * 添加别名
           */
-        'Sk3' => link1st\Easemob\Facades\Easemob::class,
+        'Ks3' => link1st\Ks3\Facades\Ks3::class,
     ],
 ```
 
@@ -31,11 +31,11 @@
 
 `php artisan vendor:publish`
 
-设置环信的参数 **config/easemob.php**
+设置金山云的参数 **config/sk3.php**
 
 
 ## 使用
 - - -
-### 获取token
-`\Easemob::getToken();`
+### 上传图片 获取图片url 是否返回false 
+`\Ks3::putObjectByFile($file_path,$new_file_name);`
 
