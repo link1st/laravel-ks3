@@ -3,7 +3,7 @@ namespace link1st\Ks3;
 
 use Illuminate\Support\ServiceProvider;
 
-use link1st\Ks3\App\Ks3Client;
+use link1st\Ks3\App\LaravelKs3Client;
 
 class Ks3ServiceProvider extends ServiceProvider
 {
@@ -50,7 +50,7 @@ class Ks3ServiceProvider extends ServiceProvider
 
         // 容器绑定
         $this->app->bind('Ks3', function () {
-            return new Ks3Client();
+            return new LaravelKs3Client();
         });
     }
 
