@@ -117,6 +117,7 @@ class LaravelKs3Client
                 'url'  => 'http://'.$this->config['ks3_bucket'].'.'.$this->config['ks3_end_point'].'/'.$new_file_name,
                 'etag' => $ks3Res['ETag'],
             ];
+            return $res;
         } catch (\Exception $e) {
             // 上传文件失败
         }
