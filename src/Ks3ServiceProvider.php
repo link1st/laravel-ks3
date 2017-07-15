@@ -28,7 +28,7 @@ class Ks3ServiceProvider extends ServiceProvider
 
         // 发布配置文件 + 可以发布迁移文件
         $this->publishes([
-            __DIR__.'/config/ks3.php' => config_path('ks3.php'),
+            __DIR__.'/../config/ks3.php' => config_path('ks3.php'),
         ]);
 
     }
@@ -45,7 +45,7 @@ class Ks3ServiceProvider extends ServiceProvider
     {
         // 将给定配置文件合现配置文件接合
         $this->mergeConfigFrom(
-            __DIR__.'/config/ks3.php', 'ks3'
+            __DIR__.'/../config/ks3.php', 'ks3'
         );
 
         // 容器绑定

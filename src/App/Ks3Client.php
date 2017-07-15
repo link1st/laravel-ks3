@@ -2,6 +2,7 @@
 
 namespace link1st\Ks3\App;
 
+use Config;
 class Ks3Client
 {
 
