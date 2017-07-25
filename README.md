@@ -36,6 +36,6 @@
 
 ## 使用
 - - -
-### 上传图片 获取图片url 是否返回false 
+### 上传图片 获取图片url 失败返回false 
 `\Ks3::putObjectByFile($file_path,$new_file_name);`
 
