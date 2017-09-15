@@ -113,10 +113,18 @@ class LaravelKs3Client
                 throw new \Exception('ETag 不存在!');
             }
 
+            if (KS3_API_USE_HTTPS === true) {
+                $img_url = 'https://';
+            } else {
+                $img_url = 'http://';
+            }
+            $img_url = $img_url.$this->config['ks3_bucket'].'.'.$this->config['ks3_end_point'].'/'.$new_file_name;
+
             $res = [
-                'url'  => 'http://'.$this->config['ks3_bucket'].'.'.$this->config['ks3_end_point'].'/'.$new_file_name,
+                'url'  => $img_url,
                 'etag' => $ks3Res['ETag'],
             ];
+
             return $res;
         } catch (\Exception $e) {
             // 上传文件失败
