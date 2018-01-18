@@ -39,6 +39,9 @@
 ### 上传图片 获取图片url 失败返回false 
 - `$file_path` 本地文件路径
 - `$new_file_name` 上传以后新的文件名
-`\Ks3::putObjectByFile($file_path,$new_file_name);`
+
+```
+\Ks3::putObjectByFile($file_path,$new_file_name);
+```
 
 
